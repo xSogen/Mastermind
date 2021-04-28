@@ -1,6 +1,8 @@
 
 package uabc.ic.benjaminbolanos.mastermind;
 
+import java.util.Objects;
+
 /**
  *
  * @author Benjamin Bolaños
@@ -29,6 +31,18 @@ public class Canica {
 
     public void setTamano(int tamano) {
         this.tamano = tamano;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Canica canica = (Canica) o;
+        return Objects.equals(color, canica.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color);
     }
 }
 

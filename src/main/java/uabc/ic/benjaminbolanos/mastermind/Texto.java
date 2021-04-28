@@ -14,18 +14,24 @@ public class Texto {
     private int tamaño;
     private FontRenderContext frc;
     private Font font1;
+    private TextLayout textl;
+    private int posX;
+    private int posY;
+    private Canvas canvas=MastermindGrafico.getCanvas();
     
-    public Texto(String contenido, int tamaño){
+    
+    public Texto(String contenido, int posX, int posY, int tamaño){
         this.contenido=contenido;
         this.tamaño=tamaño;
-        Font font1 = new Font("Courier", Font.BOLD, tamaño);
-        FontRenderContext frc=new FontRenderContext(null, false, false);
-        
+        this.posX=posX;
+        this.posY=posY;
+        font1 = new Font("Courier", Font.BOLD, tamaño);
+        frc=new FontRenderContext(null, false, false);
+        textl=new TextLayout(contenido,font1,frc);
     }
     
-    public void imprimir(int posX, int posY, Canvas canvas){
-        TextLayout texto=new TextLayout(contenido,font1,frc);
-        texto.draw(canvas.getGraphic(),posX,posY);
+    public void imprimir(){
+        textl.draw(canvas.getGraphic(),posX,posY);
     }
     
     

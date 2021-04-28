@@ -17,12 +17,15 @@ public class MastermindGrafico {
     private String codigoColores[] = {"AZ", "AM", "RO", "NE", "CA", "NA", "MO", "BL"};
     
     
+    
     public MastermindGrafico(int tamañoDeJuego){
         canvas=new Canvas("Mastermind",1000,1000,new Color(243,222,165));
         canvas.setVisible(true);
-        tablero=new TableroGrafico(tamañoDeJuego,canvas);
-        mostrarColores();
-        //dibujarTexto("MASTERMIND",400,40,40);
+        
+        //tablero=new TableroGrafico(tamañoDeJuego,canvas);
+        //mostrarColores();
+        //Texto titulo=new Texto("MASTERMIND",400,40,40);
+        //titulo.imprimir();
     }
     
     
@@ -38,7 +41,8 @@ public class MastermindGrafico {
         posY=817;
         canvas.setForegroundColor("black");
         for(String codigo:codigoColores){
-            //dibujarTexto(codigo,posX,posY,20);
+            Texto codigoCol=new Texto(codigo,posX,posY,20);
+            codigoCol.imprimir();
             posY+=25;
         }
     }

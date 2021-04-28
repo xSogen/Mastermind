@@ -161,7 +161,11 @@ public class Canvas
         }
         else if(colorString.equals("gray")) {
             graphic.setColor(new Color(165,165,165));
-        }else{
+        }
+        else if(colorString.equals("menu")) {
+            graphic.setColor(new Color(117,202,244));
+        }
+        else{
             graphic.setColor(Color.black);
         }
     }

@@ -48,6 +48,10 @@ public class TableroLogico {
     public void setAciertos(int[] aciertos) {
         this.aciertos = aciertos;
     }
+    
+    public String[] getColores(){
+        return color;
+    }
 
     /**
      * Metodo que crea 'tamañoDeJuego' canicas y las mete en el ArrayList respuesta.

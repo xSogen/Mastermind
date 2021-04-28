@@ -46,6 +46,14 @@ public class Canvas
     private Image canvasImage;
     private List<Object> objects;
     private HashMap<Object, ShapeDescription> shapes;
+
+    public Graphics2D getGraphic() {
+        return graphic;
+    }
+
+    public void setGraphic(Graphics2D graphic) {
+        this.graphic = graphic;
+    }
     
     /**
      * Create a Canvas.
@@ -146,9 +154,14 @@ public class Canvas
             graphic.setColor(Color.white);
         }
         else if(colorString.equals("orange")) {
-            graphic.setColor(Color.orange);
+            graphic.setColor(new Color(255,151,0));
         }
-        else {
+        else if(colorString.equals("brown")) {
+            graphic.setColor(new Color(75,44,0));
+        }
+        else if(colorString.equals("gray")) {
+            graphic.setColor(new Color(165,165,165));
+        }else{
             graphic.setColor(Color.black);
         }
     }

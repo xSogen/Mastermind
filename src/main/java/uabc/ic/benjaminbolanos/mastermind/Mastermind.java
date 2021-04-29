@@ -16,8 +16,10 @@ public class Mastermind {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         MastermindGrafico graph=new MastermindGrafico(6);
         TableroLogico tl=new TableroLogico(4,15);
+        
     }
     
 }

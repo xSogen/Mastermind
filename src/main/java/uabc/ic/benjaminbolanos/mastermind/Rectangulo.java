@@ -3,7 +3,7 @@ package uabc.ic.benjaminbolanos.mastermind;
 import java.awt.Rectangle;
 
 /**
- *
+ * Clase para dibujar un rectangulo
  * @author Benjamin Bolaños
  * @version 2021.04.26
  */

@@ -165,6 +165,9 @@ public class Canvas
         else if(colorString.equals("menu")) {
             graphic.setColor(new Color(117,202,244));
         }
+        else if(colorString.equals("tabla")) {
+            graphic.setColor(new Color(146,95,20));
+        }
         else{
             graphic.setColor(Color.black);
         }
@@ -191,7 +194,7 @@ public class Canvas
     /**
      * Redraw ell shapes currently on the Canvas.
      */
-    private void redraw()
+    public void redraw()
     {
         erase();
         for(Object shape : objects) {
